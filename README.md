@@ -28,9 +28,9 @@ git clone https://github.com/robeving/LinuxTerminalFailGifs
 chmod +x LinuxTerminalFailGifs/fail.sh
 sudo apt install imagemagick bc uuid jq
 ```
-4. Edit LinuxTerminalFailGifs/fail.sh and ensure the config lines at the top of the file seem reasonable. They are set for Ubuntu 18.04 WSL defaults
-5. Go to https://developers.giphy.com/ and get an API key. Add this key to LinuxTerminalFailGifs/gifhy.key
-4. Add the following to the end of your .bashrc
+4. Edit LinuxTerminalFailGifs/fail.sh and ensure the config lines at the top of the file seem reasonable. I've already set reasonable defaults for Ubuntu 18.04 WSL.
+5. Go to https://developers.giphy.com/ and get an API key. Add this to a new file called LinuxTerminalFailGifs/gifhy.key
+4. Add the following to the end of your .bashrc then restart your session to pick up these changes.
 
 ```
 PROMPT_COMMAND="$PROMPT_COMMAND"$'\n'"__prompt_command"
@@ -47,7 +47,7 @@ cat thisfiledoesnotexist
 ```
 
 6. Optional cache some gifs
-If you don't want to download a load of gifs run this command in the LinuxTerminalFailGifs directory
+If you don't want to download a new gif everytime run this command in the LinuxTerminalFailGifs directory
 ```
 for n in {1..50}; do ./fail.sh 123; done
 ```
