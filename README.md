@@ -1,5 +1,7 @@
 # LinuxTerminalFailGifs
 
+![Animated GIF showing fails in terminal](https://github.com/robeving/LinuxTerminalFailGifs/blob/master/demo.gif?raw=true)
+
 LinuxTerminalFailGifs is a shell script which uses the new Windows Terminal background feature to display animated gifs when you fail. By fail I mean when the last command you entered returns a failure code.
 
 By default it will only download a fail gif when there is less than 50 gifs that have been previous downloaded. Otherwise it will cycle through them to improve lag time between fail and gif.
