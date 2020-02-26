@@ -10,6 +10,16 @@ By default it will only download a fail gif when there is less than 50 gifs that
 ```
 Install-Module -Name MSTerminalSettings
 ```
+Its a good idea to test that this module is running correctly by running
+```
+Get-MSTerminalProfile
+```
+If you get an error this can be resolved by running
+```
+Set-ExecutionPolicy RemoteSigned
+```
+This command changes the Powershell security policy. You should be aware of the impact before running it.
+
 3. In WSL run the following
 ```
 git clone https://github.com/robeving/LinuxTerminalFailGifs
@@ -32,4 +42,10 @@ __prompt_command() {
 5. Attempt to fail
 ```
 cat thisfiledoesnotexist
+```
+
+6. Optional cache some gifs
+If you don't want to download a load of gifs run this command in the LinuxTerminalFailGifs directory
+```
+for n in {1..50}; do ./fail.sh 123; done
 ```
